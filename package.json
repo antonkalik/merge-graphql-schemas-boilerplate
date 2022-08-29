@@ -1,0 +1,38 @@
+{
+  "name": "merge-graphql-schemas-boilerplate",
+  "version": "1.0.0",
+  "description": "Merge graphql schemas from external services",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/antonkalik/merge-graphql-schemas-boilerplate.git"
+  },
+  "author": "https://github.com/antonkalik",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/antonkalik/merge-graphql-schemas-boilerplate/issues"
+  },
+  "engines": {
+    "node": "16.17.x"
+  },
+  "homepage": "https://github.com/antonkalik/merge-graphql-schemas-boilerplate#readme",
+  "devDependencies": {
+    "eslint": "^8.23.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.7.1",
+    "prettier-eslint": "^15.0.1"
+  },
+  "dependencies": {
+    "@graphql-tools/schema": "^9.0.2",
+    "@koa/cors": "^3.4.1",
+    "apollo-server-koa": "^3.10.2",
+    "graphql": "^15.8.0",
+    "koa": "^2.13.4",
+    "koa-bodyparser": "^4.3.0",
+    "koa-graphql": "^0.12.0"
+  }
+}
