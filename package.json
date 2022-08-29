@@ -27,6 +27,7 @@
     "prettier-eslint": "^15.0.1"
   },
   "dependencies": {
+    "@graphql-tools/load": "^7.7.5",
     "@graphql-tools/schema": "^9.0.2",
     "@koa/cors": "^3.4.1",
     "apollo-server-koa": "^3.10.2",
