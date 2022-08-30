@@ -22,7 +22,7 @@ module.exports = async function server({ typeDefs, resolvers }) {
     });
     schemas.push(externalSchema);
   } catch {
-    console.error('⚠️️ External Schema has not been loaded');
+    console.warn('⚠️️ External Schema has not been loaded');
   }
 
   const server = new Server({
