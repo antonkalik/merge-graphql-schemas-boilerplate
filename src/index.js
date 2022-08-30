@@ -1,28 +1,8 @@
-const Koa = require('koa');
-const bodyParser = require('koa-bodyparser');
 const cors = require('@koa/cors');
-const apolloServer = require('./apolloServer');
+const startApolloServer = require('./apolloServer');
+const typeDefs = require('./schema');
+const resolvers = require('./resolvers');
 
-const PORT = 9999;
-const app = new Koa();
-
-app.use(cors());
-app.use(bodyParser());
-
-apolloServer
-  .start()
-  .then(() => {
-    apolloServer.applyMiddleware({
-      app,
-      path: '/api/v1/graphql',
-    });
-  })
-  .catch(() => {
-    process.exit(1);
-  });
-
-app.on('error', (error, ctx) => {
-  console.error('[SERVER_ERROR]', error, ctx);
+startApolloServer({ typeDefs, resolvers }).then(({ app }) => {
+  app.use(cors());
 });
-
-app.listen(PORT);
