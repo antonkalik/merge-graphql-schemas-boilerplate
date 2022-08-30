@@ -4,7 +4,7 @@
   "description": "Merge graphql schemas from external services",
   "main": "index.js",
   "scripts": {
-    "start": "node src/index.js",
+    "start": "PORT=3000 node src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
